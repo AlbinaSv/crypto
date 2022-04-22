@@ -1,0 +1,337 @@
+/* USER VARIABLES SECTION */
+
+:root {
+	--accent: #FFFFFF;
+	--text: #929292;
+	--regular-text: 16px;
+	--lineheight: 1.65;
+	--userfont: din-pro, sans-serif;
+	--boldfont: din-pro-bold, sans-serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+/* BOOTSTRAP SETTINGS SECTION */
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { --bs-gutter-x: .625rem; }
+.row, .row > * { --bs-gutter-x: 1.25rem; }
+
+/* FONTS LOAD SECTION */
+
+@font-face {
+	font-family: 'din-pro-bold';
+	src: url('../fonts/din_pro_bold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/din_pro_bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/din_pro_bold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/din_pro_bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/din_pro_bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/din_pro_bold.svg#din_pro_bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'din-pro';
+	src: url('../fonts/din_pro.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/din_pro.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/din_pro.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/din_pro.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/din_pro.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/din_pro.svg#din_pro') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'din-pro-light';
+	src: url('../fonts/din_pro_light.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/din_pro_light.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/din_pro_light.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/din_pro_light.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/din_pro_light.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/din_pro_light.svg#din_pro_light') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+/* GENERAL CSS SETTINGS */
+
+::placeholder { color: #666; }
+::selection { background-color: var(--accent); color: #fff; }
+input, textarea { outline: none; }
+input:focus:required:invalid, textarea:focus:required:invalid { border-color: red; }
+input:required:valid, textarea:required:valid { border-color: green; }
+
+
+html,body{
+	/* min-height: 500px; */
+	min-height: 100%;
+}
+
+body {
+	font-family: var(--userfont);
+	font-size: var(--regular-text);
+	line-height: var(--lineheight);
+	/* position:relative; */
+	color: var(--text);
+	min-width: 320px;
+	/* overflow-x: hidden; */
+	background-color:#272727;
+	background-image: url('../images/fon2.jpg');
+    /* background-repeat: no-repeat;*/
+	background-position: center center; 
+	background-attachment: fixed; 
+    background-size: cover;	
+}
+
+
+
+
+/* USER STYLES */
+
+
+/* .image {
+	max-width: 100%;
+	margin-bottom: var(--bs-gutter-x);
+	border-radius: 4px;
+} */
+
+.accent {
+	color: var(--accent);
+	font-weight: bold;
+}
+
+
+
+.logo img{
+	width: 300px;
+
+}
+
+.menu{
+	margin-top: 9px;
+	color: #FFFFFF;
+	
+}
+.menu>div{
+	min-width: 300px;
+}
+
+.menu a{
+	color:#FFFFFF;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 20px;
+	font-family: var(--boldfont);
+	margin-left: 50px;
+/* letter-spacing: -0.045em; */
+}
+.menu a:first-child{
+	margin-left: 0px;
+}
+
+.menu a:hover{
+	text-decoration:underline;
+}
+
+.menu a:active{
+	color:#FED375;
+	text-decoration:underline;
+}
+.menu i{
+	font-size: 22px;
+}
+
+/* #app{
+	position: absolute;
+	 top: 50%;
+	left: 50%; 
+	margin:auto;
+	margin-right: -50%;
+	*/
+
+/* #app{
+	height: 100%;
+} */
+
+
+#appform{
+	display: inline-block;
+}
+
+main{
+	padding: 40px 50px;
+	/* text-align: left; */
+}
+
+.meta{
+	max-width: 400px;	
+	color:#929292;
+	font-size: 18px;
+	line-height: 23px;
+}
+
+.meta a{
+	color: #929292;
+}
+
+.meta p{
+	margin-bottom: 26px;
+}
+
+h1{
+	font-family: 'din-pro-bold';
+	font-size: 40px;
+	line-height: 42px;
+	/* or 105% */
+	letter-spacing: -0.04em;
+	color: #FED375;
+	text-transform: uppercase;
+	margin: 15px auto;
+ }
+
+ h2{
+	font-family: 'din-pro-light';
+	font-size: 14px;
+	line-height: 17px;
+	letter-spacing: -0.04em;
+	color: #FED375;
+	text-transform: uppercase;
+ }
+
+
+
+input{
+	border: 5px solid #FED375;
+	box-sizing: border-box;
+	border-radius: 100px;
+	padding: 5px 20px;
+	background-color: transparent;
+	color:#FFFFFF;
+	font-size: 16px;
+	/* width: 360px; */
+	/* width: 100%; */
+	text-transform: uppercase;
+	margin: 5px !important; 
+}
+input.button
+{
+	width: 120px;
+	/* width: 100%; */
+	height: 46px;
+	background: #FED375;
+	border-radius: 100px;
+	letter-spacing: 0.05em;
+}
+
+input.button:hover{
+	background: #FFE975;
+	border: 5px solid #FFE975;
+}
+
+input.button:active{
+	background: #FFC754;
+	border: 5px solid #FFC754;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: #FFFFFF;
+	opacity: 0.8; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #FFFFFF;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+	color: #FFFFFF;
+  }
+
+  ::placeholder:hover { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	transition: color 1s;
+	opacity: 1; /* Firefox */
+  }
+  
+#footer{
+	position: absolute;
+	width: 100%;
+  	bottom: 0;
+	/* margin-top: -300px; */
+	padding: 0px 70px 50px 70px;
+}
+
+.copy{
+	text-transform: uppercase;
+	/* font-family: din-pro; */
+	font-family: din-pro-bold;
+	font-size: 12px;
+	color: #858384;
+}
+
+.copy .two{
+	color: #5D5B5C;
+}
+
+.copy two a{
+	color: #5D5B5C;
+}
+
+.copy>div{
+	margin-bottom: 5px;
+}
+
+.copy a{
+	color: #858384;
+	text-decoration:underline;
+	padding:0 1px;
+}
+
+/**********************************************************/
+/*
+ * Globals !!!!!
+ */
+
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+
+/*
+ * Base structure
+ */
+
+/* body {
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+} */
+
+/* .cover-container {
+  max-width: 42em;
+} */
+
+
+/*
+ * Header
+ */
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
